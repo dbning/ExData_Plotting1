@@ -8,3 +8,6 @@ t <- strptime(dt, "%d/%m/%Y %H:%M:%S")
 Sys.setlocale("LC_TIME", "English")
 plot(t, dy, type = "n", xlab = "", ylab = "Global Active Power (kilowatts)")
 lines(t, dy)
+
+dev.copy(png, file = "plot2.png", width = 480, height = 480)
+dev.off()

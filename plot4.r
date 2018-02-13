@@ -12,6 +12,9 @@ t <- strptime(dt, "%d/%m/%Y %H:%M:%S")
 plot(t, d$Global_active_power, ylab = "Global Active Power", type = "n")
 lines(t, d$Global_active_power)
 
+dev.copy(png, file = "plot4.png", width = 480, height = 480)
+dev.off()
+
 # 2
 plot(t, d$Voltage, xlab = "datetime", type = "n")
 lines(t, d$Voltage)
@@ -33,5 +36,8 @@ legend("topright", pch = "-", col = c("black", "red", "blue"), legend = c("Sub_m
 # 4
 plot(t, d$Global_reactive_power, xlab = "datetime",  ylab = "Global_reactive_power", type = "n")
 lines(t, d$Global_reactive_power)
+
+dev.copy(png, file = "plot4.png", width = 480, height = 480)
+dev.off()
 
 
